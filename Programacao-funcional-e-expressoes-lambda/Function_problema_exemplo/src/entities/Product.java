@@ -25,8 +25,14 @@ public class Product {
         this.price = price;
     }
 
+    //metodo estático
     public static String staticProductFunction(Product p){
         return p.getName().toUpperCase();
+    }
+
+    //metodo nao estático
+    public String nonStaticProductFunction(){
+        return name.toUpperCase();
     }
 
     @Override
