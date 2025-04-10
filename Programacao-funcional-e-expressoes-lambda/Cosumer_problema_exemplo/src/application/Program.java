@@ -17,17 +17,16 @@ public class Program {
         list.add(new Product("Mouse", 30.0));
 
         /*
-         dentro do metodo forEach é chamada a instancia da classe
-         que implementa a inteface funcional Consumer, portanto,
-         o forEach irá percorrer a lista aplicando a lógica implementada na classe
+         dentro do metodo forEach é feito um reference method para
+         a classe e o metodo estático, portanto,
+         o forEach irá percorrer a lista aplicando a lógica implementada no metodo
           */
-
-        list.forEach(new ProductConsumer());
+        list.forEach(Product::staticProductConsumer);
 
         /* passando um reference method para
          o metodo println para imprimir a lista
         */
         list.forEach(System.out::println);
-        
+
     }
 }

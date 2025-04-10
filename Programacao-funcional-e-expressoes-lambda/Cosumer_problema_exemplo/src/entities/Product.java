@@ -25,6 +25,11 @@ public class Product {
         this.price = price;
     }
 
+    // metodo estático que aumenta o preço em 10%
+    public static void staticProductConsumer(Product p){
+        p.setPrice(p.getPrice() * 1.1);
+    }
+
     @Override
     public String toString() {
         return "Product{" +
