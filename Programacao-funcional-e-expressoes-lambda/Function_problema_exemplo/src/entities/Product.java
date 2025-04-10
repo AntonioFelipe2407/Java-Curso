@@ -25,6 +25,10 @@ public class Product {
         this.price = price;
     }
 
+    public static String staticProductFunction(Product p){
+        return p.getName().toUpperCase();
+    }
+
     @Override
     public String toString() {
         return "Product{" +

@@ -23,7 +23,7 @@ public class Program {
         a stream é convetida para Lista novamente e sendo atribuída
         a uma nova Lista do tipo String
          */
-        List<String> names =  list.stream().map(new ProductFunction()).collect(Collectors.toList());
+        List<String> names =  list.stream().map(Product::staticProductFunction).collect(Collectors.toList());
         names.forEach(System.out::println); // imprime a nova lista
 
 
