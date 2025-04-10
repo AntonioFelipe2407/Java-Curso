@@ -17,12 +17,11 @@ public class Program {
         list.add(new Product("Pendrive", 30.95));
         list.add(new Product("Tablet", 340.50));
 
-        Predicate<Product> pred = (Product p) -> p.getPrice() >= 100;
         /*
-        dentro do metodo removeIf é chamada o a variável "pred"
-        contendo o predicado definido
+        dentro do metodo removeIf é chamada diretamente a
+        expressão lambda contendo o predicado
          */
-        list.removeIf(pred);
+        list.removeIf( p -> p.getPrice() >= 100);
 
         list.forEach(System.out::println);
     }
