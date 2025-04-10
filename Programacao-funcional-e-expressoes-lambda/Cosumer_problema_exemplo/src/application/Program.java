@@ -17,11 +17,11 @@ public class Program {
         list.add(new Product("Mouse", 30.0));
 
         /*
-         dentro do metodo forEach é feito um reference method para
-         a classe e o metodo estático, portanto,
+         dentro do forEach é feito um reference method para
+         a classe que está o metodo NÃO estático, portanto,
          o forEach irá percorrer a lista aplicando a lógica implementada no metodo
           */
-        list.forEach(Product::staticProductConsumer);
+        list.forEach(Product::nonStaticProductConsumer);
 
         /* passando um reference method para
          o metodo println para imprimir a lista

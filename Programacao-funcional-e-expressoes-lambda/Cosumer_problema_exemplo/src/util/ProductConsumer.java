@@ -6,7 +6,6 @@ import java.util.function.Consumer;
 
 public class ProductConsumer implements Consumer<Product> {
 
-
     //Metodo da interface que altera o preço aumentando em 10%
     @Override
     public void accept(Product p) {

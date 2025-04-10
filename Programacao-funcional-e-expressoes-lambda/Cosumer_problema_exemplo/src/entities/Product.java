@@ -29,6 +29,10 @@ public class Product {
     public static void staticProductConsumer(Product p){
         p.setPrice(p.getPrice() * 1.1);
     }
+    // metodo NÃO estático que aumenta o preço em 10%
+    public void nonStaticProductConsumer(){
+        price = price * 1.1;
+    }
 
     @Override
     public String toString() {
