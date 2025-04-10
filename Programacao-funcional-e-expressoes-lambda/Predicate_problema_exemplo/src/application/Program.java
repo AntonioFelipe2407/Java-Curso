@@ -18,9 +18,9 @@ public class Program {
 
         /*
         dentro do metodo removeIf é chamada uma referência para
-        o metodo estatico dentro da classe Product
+        o metodo não estático dentro da classe Product
          */
-        list.removeIf(Product :: staticProductPredicate);
+        list.removeIf(Product::nonStaticProductPredicate);
 
         list.forEach(System.out::println);
     }

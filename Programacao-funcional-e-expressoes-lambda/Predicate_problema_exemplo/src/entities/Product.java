@@ -27,10 +27,17 @@ public class Product {
     }
 
     /*
-    metodo estatico que testa se o preço é maior ou igual a 100 e retorna um bool
+    metodo estático que testa se o preço é maior ou igual a 100 e retorna um bool
      */
-    public static boolean staticProductPredicate (Product p) {
+    public static boolean staticProductPredicate(Product p) {
         return p.getPrice() >= 100.0;
+    }
+
+    /*
+    metodo NÃO estático que testa se o preço é maior ou igual a 100 e retorna um bool
+     */
+    public boolean nonStaticProductPredicate() {
+        return price >= 100.0;
     }
 
     @Override
