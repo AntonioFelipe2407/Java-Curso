@@ -26,6 +26,13 @@ public class Product {
         this.price = price;
     }
 
+    /*
+    metodo estatico que testa se o preço é maior ou igual a 100 e retorna um bool
+     */
+    public static boolean staticProductPredicate (Product p) {
+        return p.getPrice() >= 100.0;
+    }
+
     @Override
     public String toString() {
         return "Product{" +

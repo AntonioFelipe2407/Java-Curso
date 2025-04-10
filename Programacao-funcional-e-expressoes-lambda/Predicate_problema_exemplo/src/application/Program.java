@@ -17,11 +17,10 @@ public class Program {
         list.add(new Product("Tablet", 340.50));
 
         /*
-        dentro do metodo removeIf é chamada a instancia da classe
-        que implementa a inteface funcional Predicate
-        cada produto que o bool retornar true é removido da lista
+        dentro do metodo removeIf é chamada uma referência para
+        o metodo estatico dentro da classe Product
          */
-        list.removeIf(new ProductPredicate());
+        list.removeIf(Product :: staticProductPredicate);
 
         list.forEach(System.out::println);
     }
