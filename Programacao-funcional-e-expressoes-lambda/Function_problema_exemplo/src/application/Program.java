@@ -5,6 +5,7 @@ import util.ProductFunction;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Program {
@@ -17,17 +18,16 @@ public class Program {
         list.add(new Product("Tablet", 350.0));
         list.add(new Product("Notebook", 1200.0));
 
+        Function<Product, String> func = p -> p.getName().toUpperCase();
+
         /*
         A list é convetida para stream, onde o map
         aplica o metodo para cada valor da coleção, e após isso
         a stream é convetida para Lista novamente e sendo atribuída
         a uma nova Lista do tipo String
          */
-        List<String> names =  list.stream().map(Product::nonStaticProductFunction).collect(Collectors.toList());
+        List<String> names =  list.stream().map(func).collect(Collectors.toList());
         names.forEach(System.out::println); // imprime a nova lista
-
-
-
 
     }
 }
