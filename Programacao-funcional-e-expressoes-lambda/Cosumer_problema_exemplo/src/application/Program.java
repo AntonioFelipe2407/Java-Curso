@@ -17,12 +17,10 @@ public class Program {
         list.add(new Product("Tablet", 500.76));
         list.add(new Product("Mouse", 30.0));
 
-        Consumer<Product> cons = p -> p.setPrice(p.getPrice() * 1.1);
         /*
-        dentro do metodo forEach é chamada a variável "cons"
-        contendo a expressão lambda definida
+        dentro do metodo forEach é chamado diretamente a expressão lambda
         */
-        list.forEach(cons);
+        list.forEach(p -> p.setPrice(p.getPrice() * 1.1));
 
         /* passando um reference method para
          o metodo println para imprimir a lista
