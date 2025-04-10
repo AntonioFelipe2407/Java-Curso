@@ -5,6 +5,7 @@ import util.ProductPredicate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Program {
     public static void main(String[] args) {
@@ -16,11 +17,12 @@ public class Program {
         list.add(new Product("Pendrive", 30.95));
         list.add(new Product("Tablet", 340.50));
 
+        Predicate<Product> pred = (Product p) -> p.getPrice() >= 100;
         /*
-        dentro do metodo removeIf é chamada uma referência para
-        o metodo não estático dentro da classe Product
+        dentro do metodo removeIf é chamada o a variável "pred"
+        contendo o predicado definido
          */
-        list.removeIf(Product::nonStaticProductPredicate);
+        list.removeIf(pred);
 
         list.forEach(System.out::println);
     }
